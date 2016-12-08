@@ -187,7 +187,7 @@ class server:
 		#waits for receving init message
 		data, addr = self.sock.recvfrom(5000)
 		client_ip = addr[0]
-		#client_ip = "10.0.0.159"########
+		#client_ip = watch out if you run the client, one of the collaborators and server on same machine########
 		if data[0:4] == "init":
 			cyphertext = data[4:]
 			#decrypts user keys inside init message
